@@ -11,7 +11,7 @@ sleep 1;
 //Music init. Threw it in the begging so players could listen to something while waiting
 execVM "Music\musicHandler.sqf";
 // Check for the setting
-if (TAG_EnableMusic) then {
+if (FLO_EnableMusic) then {
     1 fadeMusic 1;
 } else {
     1 fadeMusic 0;

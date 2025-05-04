@@ -1,5 +1,5 @@
 [
-    "TAG_EnableMusic",                      // Var Name
+    "FLO_EnableMusic",                      // Var Name
     "CHECKBOX",                             // Type
     ["Enable Music", "Enable background music for the mission."], // Name and Hint
     "Mission Settings",                     // Category

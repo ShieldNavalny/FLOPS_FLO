@@ -104,7 +104,7 @@ ExecVm "Music\addEventHandlerForMusic.sqf";
 //Every second
 while{true} do
 {//Main Loop
-	 if (TAG_EnableMusic) then
+	 if (FLO_EnableMusic) then
 	{
 		//Check if day or night
 		if(daytime > 19 || daytime < 6) then
@@ -165,7 +165,7 @@ ExecVm "Music\addEventHandlerForMusic.sqf";
 //Every second
 while{true} do
 {//Main Loop
-	if (TAG_EnableMusic) then
+	if (FLO_EnableMusic) then
 	{
 		//Check if day or night
 		if(daytime > 19 || daytime < 6) then

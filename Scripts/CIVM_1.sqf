@@ -57,11 +57,11 @@ removeAllActions (_this select 0);
 
   ["ScoreAdded", ["Vehicle Repaired", 00]] call BIS_fnc_showNotification;  
   [] spawn {
-      isMusicActive = 0;
+      FLO_EnableMusic = 0;
       sleep 1;
       playMusic "EventTrack01_F_Curator";
       sleep 15;
-      isMusicActive = 1;
+      FLO_EnableMusic = 1;
   }; 
 
   execVM "Scripts\Civ_Relations.sqf";

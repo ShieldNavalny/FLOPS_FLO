@@ -18,11 +18,11 @@ if (count (nearestObjects [getPos thisOutpostTrigger, FLO_configCache get "helip
         ["ScoreAdded", ["Enemy Aircraft Sabotaged", 20]] remoteExec ["BIS_fnc_showNotification", 0];
         [20] call FLO_fnc_addReward;
         [] spawn {
-            isMusicActive = 0;
+            FLO_EnableMusic = 0;
             sleep 1;
             playMusic "EventTrack01_F_Curator";
             sleep 15;
-            isMusicActive = 1;
+            FLO_EnableMusic = 1;
         }; 
         execVM 'Scripts\HeliDis.sqf';
     }];
@@ -52,11 +52,11 @@ if (count (nearestObjects [getPos thisOutpostTrigger, FLO_configCache get "tyres
             ["ScoreAdded", ["Enemy Armor Sabotaged", 30]] remoteExec ["BIS_fnc_showNotification", 0];
             [30] call FLO_fnc_addReward;
             [] spawn {
-                isMusicActive = 0;
+                FLO_EnableMusic = 0;
                 sleep 1;
                 playMusic "EventTrack01_F_Curator";
                 sleep 15;
-                isMusicActive = 1;
+                FLO_EnableMusic = 1;
             }; 
             execVM 'Scripts\LogisDis.sqf';
         }];
