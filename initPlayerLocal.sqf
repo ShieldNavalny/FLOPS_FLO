@@ -5,6 +5,9 @@ titleText ["Frontline Operations Group Presents...", "BLACK IN",9999];
 
 sleep 1;
 
+//Music
+execVM "Music\musicHandler.sqf";
+
 StartingLocationDone = false;
 
 // After Mission Loaded

@@ -56,7 +56,13 @@ removeAllActions (_this select 0);
   [] execVM "Scripts\ReputationPlus.sqf";
 
   ["ScoreAdded", ["Vehicle Repaired", 00]] call BIS_fnc_showNotification;  
-  playMusic "EventTrack01_F_Curator";   
+  [] spawn {
+      isMusicActive = 0;
+      sleep 1;
+      playMusic "EventTrack01_F_Curator";
+      sleep 15;
+      isMusicActive = 1;
+  }; 
 
   execVM "Scripts\Civ_Relations.sqf";
 

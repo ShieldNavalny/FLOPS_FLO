@@ -33,7 +33,13 @@ deleteMarker _M ;
 
 execVM "Scripts\Civ_Relations.sqf";
 
- playMusic "EventTrack01_F_Curator"; 
+   [] spawn {
+      isMusicActive = 0;
+      sleep 1;
+      playMusic "EventTrack01_F_Curator";
+      sleep 15;
+      isMusicActive = 1;
+  }; 
 }];
 
 

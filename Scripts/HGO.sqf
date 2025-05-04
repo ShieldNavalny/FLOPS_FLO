@@ -2,5 +2,11 @@
 closeDialog 0;
 titleText ["_Hours_Later_", "BLACK IN",10];
 { skipTime PHOUR;  } remoteExec ["call", 2];
-playMusic "LeadTrack01_F_Curator";
+[] spawn {
+	isMusicActive = 0;
+	sleep 1;
+	playMusic "EventTrack01_F_Curator";
+	sleep 15;
+	isMusicActive = 1;
+}; 
 closeDialog 0;
