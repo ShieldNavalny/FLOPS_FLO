@@ -144,7 +144,7 @@ class CfgMusic
 	class Empty
 	{
 		name = "Empty Sound";
-		sound[] = {"music\ogg\empty.ogg",1.0,1.0};
+		sound[] = {"Sounds\empty.ogg",1.0,1.0};
 		duration=1;
 	};
 	class Dynamic_Track_P_14: Track_P_14
