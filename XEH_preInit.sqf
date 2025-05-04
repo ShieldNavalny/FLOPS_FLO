@@ -4,7 +4,7 @@
     ["Enable Music", "Enable background music for the mission."], // Name and Hint
     "Mission Settings",                     // Category
     true,                                   // Default setting (on)
-    1,                                      // Global (1 = true)
+    nil,                                      // Global (1 = true)
     {
         params ["_value"];
         if (!hasInterface) exitWith {};
