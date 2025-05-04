@@ -89,5 +89,23 @@ if (_DisableSystemChatVal isEqualTo 0) then {
 Triggers0 = execVM "Scripts\Init\init_Triggers.sqf";
 waitUntil {sleep 1; scriptDone Triggers0 };
 
+//Stamina
+// Функция настройки стамины
+player enableStamina true;
+player setFatigue 0;
+player setAnimSpeedCoef 1;
+player setUnitTrait ["loadCoef", 1.4];
+player setCustomAimCoef 0.65;
+
+// Быстрое восстановление усталости (каждый кадр)
+if (isNil {player getVariable "fatigueEH"}) then {
+	private _eh = addMissionEventHandler ["EachFrame", {
+		if (alive player) then {
+			player setFatigue ((getFatigue player) max 0 - 0.01);
+		};
+	}];
+	player setVariable ["fatigueEH", _eh];
+};
+
 // Hint end of init
 hintSilent "LOADED!"; 
