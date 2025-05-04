@@ -1,4 +1,4 @@
-// Music Class. Example of classes for dynamic music: - Shield 
+// Класс музыки. Пример классов для динамической музыки: - Shield 
 //class Track_Name
 //{
 ////name = "Track Name (Best left in Comment mode)";
@@ -31,7 +31,7 @@
 //for fog infantry combat "infantryfogcombat"
 //for get away or vehicle combat "vehiclecombat
 
-// Importing A3 and A1/A2/A2OA original compositions
+// Импорт оригинальных композиций A3 и A1/A2/A2OA
 import Track_P_14 from CfgMusic;
 import LeadTrack01c_F from CfgMusic;
 import LeadTrack04a_F from CfgMusic;
@@ -138,6 +138,36 @@ import LeadTrack05_F_EXP from CfgMusic;
 import LeadTrack03_F_Jets from CfgMusic;
 import LeadTrack04_F_EPA from CfgMusic;
 import AmbientTrack04_F_EXP from CfgMusic;
+
+//REACTION FORCES IMPORT (COMMENT OUT IF YOU DON'T HAVE ONE)
+import TitleTrack01_RF from CfgMusic;
+import music_action_full_RF from CfgMusic;
+import AmbientTrack02c_RF from CfgMusic;
+import music_combat_full_RF from CfgMusic;
+import music_darkaction_full_RF from CfgMusic;
+import music_hero_full_RF from CfgMusic;
+import AmbientTrack01_RF from CfgMusic;
+import AmbientTrack02a_RF from CfgMusic;
+import AmbientTrack02b_RF from CfgMusic;
+import music_atmospheric_full_RF from CfgMusic;
+import music_calm_full_RF from CfgMusic;
+import music_night_full_RF from CfgMusic;
+import jukebox_calm02_RF from CfgMusic;
+import jukebox_calm03_RF from CfgMusic;
+
+//Aegis Mod import (COMMENT OUT IF YOU DON'T HAVE ONE)
+import LeadTrack01_F_Aegis from CfgMusic;
+import LeadTrack03_F_Aegis from CfgMusic;
+import LeadTrack02_F_Aegis from CfgMusic;
+
+//Lxws (Wester Sahara) (COMMENT OUT IF YOU DON'T HAVE ONE) 
+import LeadTrack01_lxWS from CfgMusic;
+import jukebox_e1_lxWS from CfgMusic;
+import jukebox_e3_lxWS from CfgMusic;
+import jukebox_e2_lxWS from CfgMusic;
+import jukebox_t1_lxWS from CfgMusic;
+import jukebox_t2_lxWS from CfgMusic;
+
 
 class CfgMusic
 {
@@ -1096,5 +1126,160 @@ class CfgMusic
        		1,
         	1
     	};
+	};
+	//
+	//LXWS (Wester Sahara music) IF YOU DON'T HAVE ONE OR COMPAT - COMMENT OUT THE BLOCK
+	//
+		class Dynamic_LeadTrack01_lxWS: LeadTrack01_lxWS
+	{    
+    	parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+    	sound[]=
+    	{
+       		"@lxWS\music_f_lxWS\music\LeadTrack01_lxWS.ogg",
+       		1,
+        	1
+    	};
+	};
+	class Dynamic_jukebox_e1_lxWS: jukebox_e1_lxWS
+	{    
+    	parameters[] = {"daytime", "tank", "helicopter", "plane", "skydive", "car"};
+    	sound[]=
+    	{
+       		"@lxWS\music_f_lxWS\music\jukebox\e1.wss",
+       		1,
+        	1
+    	};
+	};
+	class Dynamic_jukebox_e3_lxWS: jukebox_e3_lxWS
+	{    
+    	parameters[] = {"daytime", "tank", "helicopter", "plane", "skydive", "car"};
+    	sound[]=
+    	{
+       		"@lxWS\music_f_lxWS\music\jukebox\e3.wss",
+       		1,
+        	1
+    	};
+	};
+	class Dynamic_jukebox_e2_lxWS: jukebox_e2_lxWS
+	{    
+    	parameters[] = {"daytime", "tank", "helicopter", "plane", "skydive", "car"};
+    	sound[]=
+    	{
+       		"@lxWS\music_f_lxWS\music\jukebox\e2.wss",
+       		1,
+        	1
+    	};
+	};
+	class Dynamic_jukebox_t1_lxWS: jukebox_t1_lxWS
+	{    
+    	parameters[] = {"nighttime", "tank", "helicopter", "plane", "skydive", "car"};
+    	sound[]=
+    	{
+       		"@lxWS\music_f_lxWS\music\tension\t1.wss",
+       		1,
+        	1
+    	};
+	};
+	class Dynamic_jukebox_t2_lxWS: jukebox_t2_lxWS
+	{    
+    	parameters[] = {"daytime", "tank", "helicopter", "plane", "skydive", "car"};
+    	sound[]=
+    	{
+       		"@lxWS\music_f_lxWS\music\tension\t2.wss",
+       		1,
+        	1
+    	};
+	};
+	class Dynamic_LeadTrack02a_F_EXP: LeadTrack02a_F_EXP
+	{
+		parameters[] = {"infantrycombat"};
+	};
+	class Dynamic_LeadTrack05_F_EXP: LeadTrack05_F_EXP
+	{
+		parameters[] = {"infantrycombat"};
+	};
+	class Dynamic_LeadTrack03_F_Jets: LeadTrack03_F_Jets
+	{
+		parameters[] = {"plane","helicopter"};
+	};
+	class Dynamic_LeadTrack03_F_Aegis: LeadTrack03_F_Aegis
+	{
+		parameters[] = {"plane","helicopter"};
+	};
+	class Dynamic_LeadTrack02_F_Aegis: LeadTrack02_F_Aegis
+	{
+		parameters[] = {"plane","helicopter"};
+	};
+	class Dynamic_LeadTrack04_F_EPA: LeadTrack04_F_EPA
+	{
+		parameters[] = {"nighttime", "skydive", "car", "tank", "boat", "helicopter", "plane"};
+	};
+	class Dynamic_AmbientTrack04_F_EXP: AmbientTrack04_F_EXP
+	{
+		parameters[] = {"daytime"};
+	};
+	class Dynamic_LeadTrack01_F_Aegis: LeadTrack01_F_Aegis
+	{
+		parameters[] = {"daytime"};
+	};
+	//
+	// REACTION FORCES MUSIC! IF YOU DON'T HAVE ONE COMMENT OUT THE BLOCK
+	//
+	class Dynamic_TitleTrack01_RF: TitleTrack01_RF
+	{
+		parameters[] = {"infantrycombat"};
+	};
+	class Dynamic_music_action_full_RF: music_action_full_RF
+	{
+		parameters[] = {"infantrycombat", "nighttime", "rain"};
+	};
+	class Dynamic_AmbientTrack02c_RF: AmbientTrack02c_RF
+	{
+		parameters[] = {"infantrycombat", "nighttime", "rain"};
+	};
+	class Dynamic_music_combat_full_RF: music_combat_full_RF
+	{
+		parameters[] = {"infantrycombat"};
+	};
+	class Dynamic_music_darkaction_full_RF: music_darkaction_full_RF
+	{
+		parameters[] = {"infantrycombat", "nighttime", "rain", "fog"};
+	};
+	class Dynamic_music_hero_full_RF: music_hero_full_RF
+	{
+		parameters[] = {"vehiclecombat"};
+	};
+	// REACTION FORCES - AMBIENTS
+	class Dynamic_AmbientTrack01_RF: AmbientTrack01_RF
+	{
+		parameters[] = {"daytime", "nighttime"};
+	};
+	class Dynamic_AmbientTrack02a_RF: AmbientTrack02a_RF
+	{
+		parameters[] = {"nighttime"};
+	};
+	class Dynamic_AmbientTrack02b_RF: AmbientTrack02b_RF
+	{
+		parameters[] = {"nighttime"};
+	};
+	class Dynamic_music_atmospheric_full_RF: music_atmospheric_full_RF
+	{
+		parameters[] = {"daytime", "nighttime"};
+	};
+	class Dynamic_music_calm_full_RF: music_calm_full_RF
+	{
+		parameters[] = {"nighttime", "rain"};
+	};
+	class Dynamic_music_night_full_RF: music_night_full_RF
+	{
+		parameters[] = {"nighttime", "rain", "fog", "scubadive"};
+	};
+	class Dynamic_jukebox_calm02_RF: jukebox_calm02_RF
+	{
+		parameters[] = {"nighttime", "rain"};
+	};
+	class Dynamic_jukebox_calm03_RF: jukebox_calm03_RF
+	{
+		parameters[] = {"nighttime", "rain"};
 	};
 };

@@ -12,55 +12,56 @@
 // Predefined Groups from the config
 // Used as the primary groups for the virtualization system
 East_Groups = [
-(configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfSentry"),
-(configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfTeam_AT"),
-(configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfTeam_AA"),
-(configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "I_InfTeam_Light"),
-(configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfSquad"),
-(configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfSquad_Weapons")
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfSentry_A"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfTeam_AT_A"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfTeam_AA_A"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfTeam_A"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Support" >> "O_R_Support_Mort"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Support" >> "O_R_Support_MG"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfSquad_Weapons_A")
 ];
 // Ambient/Civilian-Like Ground Vehicles
-East_Ground_Vehicles_Ambient = ["I_MRAP_03_F"]; 
+East_Ground_Vehicles_Ambient = ["O_R_Truck_02_medical_F", "O_R_Truck_02_box_F", "O_R_Truck_02_Ammo_F", "O_R_Truck_02_fuel_F", "O_R_MRAP_02_F", "O_R_LSV_02_unarmed_F", "O_R_Truck_02_cargo_F", "O_R_Truck_02_flatbed_F", "O_R_Truck_03_ammo_F", "O_R_Truck_03_medical_F", "O_R_Truck_03_repair_F", "O_R_Truck_03_fuel_F"]; 
 // Light Military Ground Vehicles
-East_Ground_Vehicles_Light = ["I_MRAP_03_F", "I_MRAP_03_gmg_F", "I_MRAP_03_hmg_F", "I_APC_Wheeled_03_cannon_F"];
+East_Ground_Vehicles_Light = ["O_R_LSV_02_AT_F", "O_R_LSV_02_armed_F", "O_R_MRAP_02_gmg_F", "O_R_MRAP_02_hmg_F", "O_R_APC_Wheeled_04_cannon_F", "O_R_APC_Wheeled_04_cannon_v2_F", "Aegis_O_R_Truck_02_aa_F"];
 // Heavy Ground Vehicles and Tanks
-East_Ground_Vehicles_Heavy = ["I_MBT_03_cannon_F", "I_LT_01_cannon_F", "I_LT_01_AT_F", "I_LT_01_AA_F", "I_APC_tracked_03_cannon_v2_F"]; 
+East_Ground_Vehicles_Heavy = ["Aegis_O_R_APC_Tracked_02_30mm_lxWS", "O_R_APC_Tracked_02_AA_F", "Aegis_O_R_MBT_02_Railgun_F", "O_R_MBT_04_cannon_F", "O_R_MBT_04_command_F", "O_R_MBT_02_cannon_F"]; 
 // Transport Ground Vehicles
-East_Ground_Transport = ["I_MRAP_03_F", "I_Truck_02_transport_F", "I_Truck_02_covered_F"]; 
+East_Ground_Transport = ["O_R_Truck_03_transport_F", "O_R_Truck_03_covered_F", "O_R_MRAP_02_F", "O_R_LSV_02_unarmed_F", "O_R_Truck_02_F", "O_R_Truck_02_transport_F"]; 
 // Transport Air Vehicles
-East_Air_Transport = ["I_Heli_Transport_02_F", "Aegis_I_Heli_Transport_02_Heavy_F", "I_Heli_Light_01_F", "I_Heli_light_03_unarmed_F"];
+East_Air_Transport = ["O_R_Heli_Light_02_unarmed_F", "O_R_Heli_Light_02_dynamicLoadout_F", "O_R_Heli_Transport_04_bench_F", "O_R_Heli_Transport_04_covered_F", "Aegis_O_R_Heli_Attack_04_F", "O_R_Heli_Attack_02_dynamicLoadout_F"];
 // Armed Helicopters
-East_Air_Heli = ["I_Heli_Attack_03_F", "I_Heli_Light_01_dynamicLoadout_F", "I_Heli_light_03_dynamicLoadout_F"]; 
+East_Air_Heli = ["O_R_Heli_Light_02_dynamicLoadout_F", "Aegis_O_R_Heli_Attack_04_F", "O_R_Heli_Attack_02_dynamicLoadout_F"]; 
 // Fixed-Wing Aircraft
-East_Air_Jet = ["I_Plane_Fighter_04_F", "I_Plane_Fighter_03_dynamicLoadout_F"]; 
+East_Air_Jet = ["O_R_Plane_Fighter_02_Stealth_F", "O_R_Plane_Fighter_02_F", "O_R_Plane_CAS_02_dynamicLoadout_F"]; 
 // Artillery Units
-East_Ground_Artillery = ["O_MBT_02_arty_F"]; 
+East_Ground_Artillery = ["O_R_MBT_02_arty_F", "O_R_Truck_02_MRL_F"]; 
 // Drone Units
-East_Air_Drone = ["I_UAV_01_F"]; 
+East_Air_Drone = ["O_R_UAV_06_F", "Aegis_O_R_UAV_02_lxWS", "O_R_UAV_01_F"]; 
 // Individual Infantry Units
 East_Units = [
     // Regular infantry (high frequency)
-    "I_soldier_F", "I_soldier_F", "I_soldier_F", "I_soldier_F",  // Regular rifleman
-    "I_Soldier_AR_F", "I_Soldier_AR_F",                          // Autorifleman
-    "I_Soldier_CQ_F", "I_Soldier_CQ_F",                          // CQB specialist
-    "I_Soldier_GL_F", "I_Soldier_GL_F",                          // Grenadier
+    "O_R_Soldier_ard_F", "O_R_Soldier_ard_F", "O_R_Soldier_ard_F", "O_R_Soldier_ard_F",  // Regular rifleman
+    "O_R_soldier_AR_ard_F", "O_R_soldier_AR_ard_F",                          // Autorifleman
+    "O_R_Soldier_CQ_ard_F", "O_R_Soldier_CQ_ard_F",                          // CQB specialist
+    "O_R_Soldier_GL_ard_F", "O_R_Soldier_GL_ard_F",                          // Grenadier
     
     // Support roles (medium frequency)
-    "I_medic_F", "I_medic_F",                                    // Medic
-    "I_Soldier_MG_F", "I_Soldier_MG_F",              // Machine gunner
-    "I_Soldier_M_F",                                             // Marksman
-    "I_Soldier_A_F",                                             // Ammo bearer
+    "O_R_medic_ard_F", "O_R_medic_ard_F",                                    // Medic
+    "O_R_recon_AR_ard_F", "O_R_recon_AR_ard_F",              // Machine gunner
+    "Aegis_O_R_Sharpshooter_ard_F",                                             // Marksman
+    "O_R_Soldier_A_ard_F",                                             // Ammo bearer
     
     // Specialists (low frequency)
-    "I_Soldier_LAT_F",                                           // Light AT
-    "I_Soldier_LAT2_F",                                          // Light AT
-    "I_Soldier_AT_F",                                            // AT Specialist
-    "I_Soldier_AA_F"                                             // AA Specialist
+    "O_R_Soldier_LAT_ard_F",                                           // Light AT
+    "O_R_Soldier_HAT_ard_F",                                          // Light AT
+    "O_R_ghillie_sard_F",                                            // Sniper
+    "O_R_soldier_AA_ard_F"                                             // AA Specialist
 ];
 // Fire Observer Units for Artillery
-East_FireObserver = ["I_RadioOperator_F"];
+East_FireObserver = ["O_R_recon_JTAC_ard_F"];
 // Officer Units
-East_Units_Officers = ["I_officer_F"];
+East_Units_Officers = ["O_R_officer_ard_F"];
 
 /*
  * OPFOR Virtualization Objective Configuration

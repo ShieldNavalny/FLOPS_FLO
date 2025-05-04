@@ -6,6 +6,10 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=513;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
 		nextID=131432;
@@ -16,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16827;
+		nextID=16851;
 	};
 	class Camera
 	{
-		pos[]={-569.30414,42.176586,482.2908};
-		dir[]={0.20914726,-0.7325474,0.6477899};
-		up[]={0.22507223,0.68071604,0.69711417};
-		aside[]={0.95163012,0,-0.30724597};
+		pos[]={-565.60352,13.349756,524.4668};
+		dir[]={0.84194726,-0.51869828,0.14936101};
+		up[]={0.51081473,0.8548907,0.090619892};
+		aside[]={0.17469127,2.3638131e-07,-0.98472899};
 	};
 };
 binarizationWanted=0;
@@ -38,7 +42,9 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Modules_F_Hc",
 	"A3_Characters_F",
+	"A3_Aegis_Characters_F_Aegis",
 	"A3_Weapons_F",
+	"A3_Aegis_Characters_F_Aegis_Uniforms",
 	"ace_explosives",
 	"A3_Characters_F_Mark",
 	"ace_gforces",
@@ -48,7 +54,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			className="A3_Structures_F_Ind";
@@ -86,30 +92,37 @@ class AddonsMetaData
 		};
 		class Item5
 		{
+			className="A3_Aegis_Characters_F_Aegis";
+			name="Arma 3 Aegis - Characters and Clothing";
+			author="Avery Kaiserin";
+			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
+		};
+		class Item6
+		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item7
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
-			author="ACE-Team";
+			author="Команда ACE";
 			url="https://ace3.acemod.org/";
 		};
-		class Item7
+		class Item8
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item9
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
-			author="ACE-Team";
+			author="Команда ACE";
 			url="https://ace3.acemod.org/";
 		};
 	};
@@ -159,7 +172,85 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		class Attribute1
+		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="ReviveForceRespawnDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=10;
+				};
+			};
+		};
+		class Attribute3
+		{
+			property="ReviveBleedOutDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=300;
+				};
+			};
+		};
+		class Attribute4
+		{
+			property="ReviveMedicSpeedMultiplier";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=3;
+				};
+			};
+		};
+		class Attribute5
+		{
+			property="ReviveDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=10.376768;
+				};
+			};
+		};
+		class Attribute6
+		{
+			property="ReviveRequiredItems";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=2;
+				};
+			};
+		};
+		nAttributes=7;
 	};
 };
 class Mission
@@ -6668,7 +6759,7 @@ class Mission
 			name="MODULES";
 			class Entities
 			{
-				items=12;
+				items=5;
 				class Item0
 				{
 					dataType="Logic";
@@ -6691,7 +6782,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="76561198111941967";
+									value="#adminLogged";
 								};
 							};
 						};
@@ -6717,7 +6808,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Texas";
+									value="Cleve";
 								};
 							};
 						};
@@ -6931,482 +7022,6 @@ class Mission
 					id=118200;
 					type="HighCommandSubordinate";
 					atlOffset=185.97;
-				};
-				class Item5
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={-639.96399,0,99.515999};
-					};
-					name="ZEUS_1";
-					id=131282;
-					type="ModuleCurator_F";
-					atlOffset=185.97;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="76561198000667545  ";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Taldor";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item6
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={-647.005,0,99.067001};
-					};
-					name="ZEUS_2";
-					id=131283;
-					type="ModuleCurator_F";
-					atlOffset=185.97;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="76561198145777993";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Leon";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item7
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={-654.39398,0,98.559998};
-					};
-					name="ZEUS_3";
-					id=131284;
-					type="ModuleCurator_F";
-					atlOffset=185.97;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="76561198874160679";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Felix";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item8
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={-662.08899,0,98.041};
-					};
-					name="ZEUS_4";
-					id=131285;
-					type="ModuleCurator_F";
-					atlOffset=185.97;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="76561199260716262";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Kilgore";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item9
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={-669.211,0,97.461998};
-					};
-					name="ZEUS_5";
-					id=131286;
-					type="ModuleCurator_F";
-					atlOffset=185.97;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="76561198832275757";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Stewie";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item10
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={-675.93903,0,96.560997};
-					};
-					name="ZEUS_6";
-					id=131287;
-					type="ModuleCurator_F";
-					atlOffset=185.97;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="76561198294153133";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Mark";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item11
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={-683.22101,0,95.93};
-					};
-					name="ZEUS_7";
-					id=131288;
-					type="ModuleCurator_F";
-					atlOffset=185.97;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="76561198343484805";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Angel";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=4;
-					};
 				};
 			};
 			id=78281;
@@ -9028,6 +8643,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9109,6 +8729,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9191,6 +8816,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9200,19 +8830,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="allowDamage";
 							expression="_this allowdamage _value;";
@@ -9225,7 +8842,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -9238,7 +8855,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -9251,7 +8868,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute3
 						{
 							property="hideObject";
 							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
@@ -9264,7 +8881,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=4;
 					};
 				};
 			};
@@ -9316,6 +8933,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9396,6 +9018,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9476,6 +9103,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9558,6 +9190,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9567,19 +9204,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="allowDamage";
 							expression="_this allowdamage _value;";
@@ -9592,7 +9216,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -9605,7 +9229,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -9618,7 +9242,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute3
 						{
 							property="hideObject";
 							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
@@ -9631,7 +9255,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=4;
 					};
 				};
 			};
@@ -9684,6 +9308,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9764,6 +9393,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9844,6 +9478,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -9924,6 +9563,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10006,6 +9650,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10086,6 +9735,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10166,6 +9820,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10246,6 +9905,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10326,6 +9990,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10439,6 +10108,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10519,6 +10193,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10599,6 +10278,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10679,6 +10363,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10761,6 +10450,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10841,6 +10535,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -10921,6 +10620,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11001,6 +10705,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11081,6 +10790,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11194,6 +10908,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11274,6 +10993,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11354,6 +11078,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11434,6 +11163,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11516,6 +11250,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11596,6 +11335,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11676,6 +11420,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11756,6 +11505,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11836,6 +11590,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -11949,6 +11708,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12029,6 +11793,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12109,6 +11878,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12189,6 +11963,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12271,6 +12050,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12351,6 +12135,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12431,6 +12220,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12511,6 +12305,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12591,6 +12390,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12704,6 +12508,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12784,6 +12593,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12864,6 +12678,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -12977,6 +12796,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13059,6 +12883,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13140,6 +12969,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13221,6 +13055,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13302,6 +13141,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13383,6 +13227,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13496,6 +13345,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13578,6 +13432,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13659,6 +13518,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13740,6 +13604,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13821,6 +13690,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -13902,6 +13776,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14017,6 +13896,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14026,19 +13910,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="allowDamage";
 							expression="_this allowdamage _value;";
@@ -14051,7 +13922,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -14064,7 +13935,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -14077,7 +13948,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute3
 						{
 							property="hideObject";
 							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
@@ -14090,7 +13961,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -14112,6 +13983,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14121,19 +13997,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="allowDamage";
 							expression="_this allowdamage _value;";
@@ -14146,7 +14009,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -14159,7 +14022,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -14172,7 +14035,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute3
 						{
 							property="hideObject";
 							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
@@ -14185,7 +14048,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -14207,6 +14070,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14216,19 +14084,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=2;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="allowDamage";
 							expression="_this allowdamage _value;";
@@ -14241,7 +14096,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -14254,7 +14109,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -14267,7 +14122,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute3
 						{
 							property="hideObject";
 							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
@@ -14280,7 +14135,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -14302,6 +14157,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14384,6 +14244,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14466,6 +14331,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14579,6 +14449,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14660,6 +14535,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14741,6 +14621,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14822,6 +14707,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -14903,6 +14793,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15017,6 +14912,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15026,19 +14926,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="allowDamage";
 							expression="_this allowdamage _value;";
@@ -15051,7 +14938,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
 							property="ace_advanced_fatigue_performanceFactor";
 							expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
@@ -15064,7 +14951,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute2
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -15077,7 +14964,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute3
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -15090,7 +14977,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute4
 						{
 							property="hideObject";
 							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
@@ -15103,7 +14990,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=6;
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -15124,6 +15011,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15216,6 +15108,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15308,6 +15205,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15402,6 +15304,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15528,6 +15435,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15621,6 +15533,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15714,6 +15631,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15808,6 +15730,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -15934,6 +15861,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -16027,6 +15959,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -16120,6 +16057,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};
@@ -16214,6 +16156,11 @@ class Mission
 						disableSimulation=1;
 						class Inventory
 						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_tshirt";
+								isBackpack=0;
+							};
 							map="ItemMap";
 						};
 					};

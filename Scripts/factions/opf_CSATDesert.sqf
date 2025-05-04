@@ -9,13 +9,12 @@
 // Predefined Groups from the config
 // Used as the primary groups for the virtualization system
 East_Groups = [
-(configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> "OIA_InfSentry"),
-(configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> "OIA_InfTeam_AT"),
-(configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> "OIA_InfTeam_AA"),
-(configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> "OIA_InfTeam"),
-(configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Support" >> "OI_support_Mort"),
-(configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Support" >> "OI_support_MG"),
-(configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> "OIA_InfSquad_Weapons")
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfSentry_A"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfTeam_AA_A"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfTeam_A"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Support" >> "O_R_Support_Mort"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Support" >> "O_R_Support_MG"),
+(configfile >> "CfgGroups" >> "East" >> "OPF_R_ard_F" >> "Infantry" >> "O_R_InfSquad_Weapons_A")
 ];
 
 // Ambient/Civilian-Like Ground Vehicles

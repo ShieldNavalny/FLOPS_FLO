@@ -28,44 +28,35 @@ private _rifles = [
     "arifle_MX_GL_F",
     "arifle_MX_SW_F",
     "arifle_MXM_F",
-    // MX Variants
-    "arifle_MX_ACO_pointer_F",
-    "arifle_MXC_ACO_pointer_F",
-    "arifle_MXC_Holo_F",
-    "arifle_MXC_Holo_pointer_F",
-    "arifle_MX_GL_ACO_pointer_F",
-    "arifle_MX_Holo_pointer_F",
-    "arifle_MX_SW_Hamr_pointer_F",
-    "arifle_MX_Hamr_pointer_F",
-    "arifle_MXM_MOS_LP_BI_F",
     // SPAR Series
-    "arifle_SPAR_01_snd_RCO_Pointer_Snds_F",
-    "arifle_SPAR_01_snd_Holo_Pointer_Snds_F",
-    "arifle_SPAR_01_GL_snd_RCO_Pointer_Snds_F",
-    "arifle_SPAR_02_snd_RCO_Pointer_Snds_Bipod_F",
+    "arifle_SPAR_01_snd_F",
+    "arifle_SPAR_01_GL_snd_F",
+    "arifle_SPAR_02_snd_F",
+    "arifle_SPAR_03_snd_F",
     // Other Weapons
-    "sgun_KSG_ACO_F",
-    "srifle_DMR_03_tan_AMS_LP_F",
-    "srifle_LRR_camo_LRPS_F",
-    "SMG_01_Holo_F",
-    "SMG_01_black_Holo_F",
-    "LMG_Mk200_plain_RCO_LP_F",
-    "LMG_Mk200_plain_RCO_LP_S_F",
-    "MMG_02_sand_RCO_LP_F",
+    "sgun_KSG_F",
+    "srifle_DMR_03_tan_F",
+    "Aegis_srifle_LRR_sand_F",
+    "SMG_01_F",
+    "SMG_01_black_F",
+    "MMG_02_sand_F",
+    "Aegis_MMG_FNMAG_old_F",
     "hgun_P07_F",
     "hgun_P07_snds_F",
     "hgun_Pistol_heavy_01_MRD_F",
-    "Aegis_MMG_FNMAG_240_F",
-    "arifle_SCAR_black_F",
+    "arifle_SA80_GL_snd_F",
+    "GL_XM25_F",
+    "hgun_Glock19_Tan_RF",
     "Aegis_arifle_SR25_MR_blk_F",
-    "Aegis_arifle_SR25_MR_snd_F"
+    "Aegis_arifle_SR25_MR_snd_F",
+    "srifle_DMR_02_sniper_F"
 ];
 
 private _launchers = [
     "launch_B_Titan_F",
     "launch_B_Titan_short_F",
     "launch_MRAWS_sand_F",
-    "ACE_launch_NLAW_ready_F"
+    "Atlas_Launch_Pzf3_F"
 ];
 
 private _attachments = [
@@ -84,17 +75,21 @@ private _attachments = [
     "optic_MRD",
     "optic_Arco",
     "optic_NVS",
-    "optic_tws_mg",
+    "Aegis_optic_ROS",
+    "Aegis_optic_ACOG_sand",
+    "optic_Hamr_sand_lxWS",
     // Accessories
     "acc_flashlight",
     "acc_pointer_IR",
+    "Aegis_acc_pointer_DM_Sand",
+    "saber_light_ir_sand_lxWS",
+    "saber_light_sand_lxWS",
     // Muzzles
     "muzzle_snds_H_snd_F",
     "muzzle_snds_338_sand",
-    "muzzle_snds_B",
+    "muzzle_snds_B_snd_F",
     "muzzle_snds_L",
     "muzzle_snds_m_snd_F",
-    "muzzle_snds_acp",
     // Bipods
     "bipod_01_F_snd",
     "bipod_01_F_blk"
@@ -108,7 +103,7 @@ private _uniforms = [
     "U_B_CBRN_Suit_01_MTP_F",
     "U_B_PilotCoveralls",
     "U_B_HeliPilotCoveralls",
-    "U_B_GhillieSuit"
+    "U_B_FullGhillie_sard"
 ];
 
 private _vests = [
@@ -123,7 +118,14 @@ private _vests = [
     "V_Chestrig_rgr",
     "V_TacVest_blk",
     "V_Rangemaster_belt",
-    "V_BandollierB_rgr"
+    "V_BandollierB_rgr",
+    "V_CarrierRigKBT_01_light_MTP_F",
+    "V_CarrierRigKBT_01_heavy_MTP_F",
+    "Aegis_V_PlateCarrier2_alt_mtp",
+    "Aegis_V_PlateCarrier_RF_mtp",
+    "Aegis_V_CarrierRigKBT_01_cqb_mtp_F",
+    "Aegis_V_CarrierRigKBT_01_recon_mtp_F",
+    "V_LegStrapBag_black_F"
 ];
 
 private _headgear = [
@@ -149,8 +151,26 @@ private _headgear = [
     "H_CrewHelmetHeli_B",
     "H_MilCap_mcamo",
     "H_Booniehat_mcamo_hs",
-    "ACE_EHP",
-    "ACE_EarPlugs"
+    "G_Aviator",
+    "G_Tactical_Black",
+    "G_Tactical_Clear",
+    "Aegis_G_scrimNet_sand_F",
+    "Aegis_G_scrimNet_under_sand_F",
+    "immersion_cigs_cigar0",
+    "murshun_cigs_cig0",
+    "G_Crayon_Brown",
+    "G_Crayon_Black",
+    "G_Crayon_Yellow",
+    "G_Tactical_Clear",
+    "G_Tactical_Black",
+    "G_Shemag_tactical",
+    "G_Shemag_tan",
+    "G_Bandanna_kawaii",
+    "G_Bandanna_Germany",
+    "G_AirPurifyingRespirator_01_F",
+    "G_Crayon_Pink",
+    "Aegis_H_Helmet_FASTMT_Cover_mtp_F",
+    "G_Combat"
 ];
 
 // Equipment and items
@@ -172,11 +192,13 @@ private _toolItems = [
     "ACE_Clacker",
     "ToolKit",
     "MineDetector",
-    "ChemicalDetector_01_watch_F",
     "ACE_IR_Strobe_Item",
     "B_UavTerminal",
     "ItemcTab",
-    "ItemAndroid"
+    "FirstAidKit",
+    "Medikit",
+    "ACE_EarPlugs",
+    "ACE_EHP"
 ];
 
 private _navigationItems = [
@@ -191,6 +213,7 @@ private _navigationItems = [
     "Rangefinder",
     "Laserdesignator",
     "TFAR_anprc152",
+    "B_UavTerminal",
     "ACE_MX2A",
     "ACE_Vector"
 ];
@@ -218,11 +241,15 @@ private _backpacks = [
     "B_UAV_06_backpack_F",
     "B_UAV_02_backpack_lxWS",
     "B_UGV_02_Demining_backpack_F",
-    "B_CombinationUnitRespirator_01_F",
     "B_Patrol_Medic_bag_F",
     "B_Patrol_Supply_bag_F",
     "B_Patrol_Respawn_bag_F",
-    "tfw_ilbe_whip_mc"
+    "B_AssaultPackSpec_mcamo",
+    "Aegis_B_patrolBackpack_mcamo_F",
+    "TFAR_rt1523g_big",
+    "TFAR_rt1523g",
+    "tfw_ilbe_whip_mc",
+    "TFAR_rt1523g_big_rhs"
 ];
 
 // Magazines and throwables
@@ -243,6 +270,11 @@ private _magazines = [
     "11Rnd_45ACP_Mag",
     "8Rnd_12Gauge_Pellets",
     "8Rnd_12Gauge_Slug",
+    "10Rnd_338_Mag",
+    "5Rnd_25x40mm_HE",
+    "5Rnd_25x40mm_airburst",
+    "16Rnd_9x21_Mag_v2",
+    "17Rnd_9x19_Mag_RF",
     "130Rnd_338_Mag",
     "150Rnd_556x45_Drum_Sand_Mag_F",
     "30Rnd_556x45_Stanag_Sand_red",
@@ -251,6 +283,8 @@ private _magazines = [
     "Aegis_20Rnd_762x51_Green_SMAG",
     "Aegis_20Rnd_762x51_Red_SMAG",
     "Aegis_20Rnd_762x51_Yellow_SMAG",
+    "murshun_cigs_cigpack",
+    "murshun_cigs_lighter",
     "Aegis_200Rnd_762x51_MAG_Red_F",
     "Aegis_200Rnd_762x51_MAG_Red_Tracer_F",
     "20Rnd_762x51_Mag",
@@ -259,6 +293,9 @@ private _magazines = [
     "Titan_AT",
     "Titan_AP",
     "NLAW_F",
+    "Atlas_DM12_HEAT_F",
+    "Atlas_DM22_HEAT_F",
+    "Atlas_DM32_HEAT_MP_F",
     "MRAWS_HEAT_F",
     "MRAWS_HE_F",
     // Explosives
@@ -285,11 +322,19 @@ private _grenades = [
     "B_IR_Grenade",
     "1Rnd_HE_Grenade_shell",
     "3Rnd_HE_Grenade_shell",
+    "3Rnd_HEDP_Grenade_shell",
+    "1Rnd_HEDP_Grenade_shell",
+    "3Rnd_UGL_FlareCIR_F",
+    "3Rnd_SmokeGreen_Grenade_shell",
+    "3Rnd_Pellets_Grenade_shell",
+    "3Rnd_UGL_FlareGreen_F",
     "1Rnd_Smoke_Grenade_shell",
     "1Rnd_SmokeBlue_Grenade_shell",
     "1Rnd_SmokeGreen_Grenade_shell",
     "1Rnd_SmokeOrange_Grenade_shell",
     "ACE_40mm_Flare_white",
+    "1Rnd_RC40_HE_shell_RF",
+    "1Rnd_RC40_shell_RF",
     "ACE_40mm_Flare_red",
     "ACE_40mm_Flare_green",
     "ACE_40mm_Flare_ir",

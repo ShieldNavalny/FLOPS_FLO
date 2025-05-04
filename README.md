@@ -1,4 +1,5 @@
 # FLO: Frontline Operations - Altis
+## This version is not meant to use by public. Please switch to Release or other branches!
 
 **Current Version**: 1.6.1
 

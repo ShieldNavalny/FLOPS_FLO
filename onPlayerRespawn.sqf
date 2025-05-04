@@ -13,7 +13,7 @@ player enableAI "all";
 removeAllWeapons player;
 removeAllItems player;
 //removeAllAssignedItems player;
-removeUniform player;
+//removeUniform player;
 removeVest player;
 removeBackpack player;
 removeHeadgear player;

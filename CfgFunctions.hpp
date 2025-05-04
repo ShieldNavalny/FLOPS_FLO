@@ -83,6 +83,8 @@ class FLO {
         
         class ragequitBlocker     {};
         class disableSystemChat   {};
+        class endEffects          {};
+
     };
 
     class Pathfinding {

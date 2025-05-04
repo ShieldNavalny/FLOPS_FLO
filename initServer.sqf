@@ -193,6 +193,10 @@ if (_RestrictedArsenalVal isEqualTo 0) then {
     [] call FLO_fnc_purchaseCrate;
 };
 
+// ExecVM a EndMission Cut Scene 
+[] execVM "Scripts\endMission.sqf";
+
+
 // Dynamic View Distance System based on server FPS
 [] spawn {
     // Configuration
