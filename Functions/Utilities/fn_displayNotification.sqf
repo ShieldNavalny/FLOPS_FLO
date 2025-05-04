@@ -51,6 +51,6 @@ private _formattedMsg = format [
 
 // Play music for all players
 if (_playMusic) then { 
-    [] spawn {isMusicActive=0; sleep 1; playMusic "EventTrack01_F_Curator"; sleep 15; isMusicActive=1;}; 
+    [] spawn {FLO_EnableMusic=0; sleep 1; playMusic "EventTrack01_F_Curator"; sleep 15; FLO_EnableMusic=1;}; 
 };
 [parseText _formattedMsg, [0, 0.5, 1, 1], [10,10], 5, 1.7, 0] call BIS_fnc_TextTiles;

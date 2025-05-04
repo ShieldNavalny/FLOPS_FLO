@@ -1,12 +1,22 @@
 params ["_player", "_didJIP"];
 
+// Headlesses does not need to Init
+if (!hasInterface) exitWith {};
+
 titleText ["Frontline Operations Group Presents...", "BLACK IN",9999];
 5 fadeSound 0;
 
 sleep 1;
 
-//Music
+//Music init. Threw it in the begging so players could listen to something while waiting
 execVM "Music\musicHandler.sqf";
+// Check for the setting
+if (FLO_EnableMusic) then {
+    1 fadeMusic 1;
+} else {
+    1 fadeMusic 0;
+};
+
 
 StartingLocationDone = false;
 

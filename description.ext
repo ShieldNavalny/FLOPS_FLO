@@ -475,4 +475,7 @@ class CfgHints
 	};
 };
 
-
+// CBA Settings Init
+class Extended_PreInit_EventHandlers {
+    FLOMission = call compile preprocessFileLineNumbers "XEH_preInit.sqf";
+};

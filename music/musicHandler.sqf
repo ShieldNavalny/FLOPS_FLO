@@ -68,7 +68,6 @@ _CarTransition = ["Empty"];
 
 if (isMultiplayer) then
 {
-isMusicActive = 1;
 duration = 0;
 
 debugging = 0;
@@ -105,7 +104,7 @@ ExecVm "Music\addEventHandlerForMusic.sqf";
 //Every second
 while{true} do
 {//Main Loop
-	if(isMusicActive == 1) then
+	 if (FLO_EnableMusic) then
 	{
 		//Check if day or night
 		if(daytime > 19 || daytime < 6) then
@@ -132,7 +131,6 @@ while{true} do
 }
 else
 {
-isMusicActive = 1;
 duration = 0;
 
 debugging = 0;
@@ -167,7 +165,7 @@ ExecVm "Music\addEventHandlerForMusic.sqf";
 //Every second
 while{true} do
 {//Main Loop
-	if(isMusicActive == 1) then
+	if (FLO_EnableMusic) then
 	{
 		//Check if day or night
 		if(daytime > 19 || daytime < 6) then

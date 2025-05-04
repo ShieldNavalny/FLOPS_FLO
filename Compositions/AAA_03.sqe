@@ -1864,7 +1864,7 @@ class items
 				side="Empty";
 				class Attributes
 				{
-					init="this addEventHandler [""Killed"", {_MMarks=allMapMarkers select {markerType _x==""o_antiair""};_M=[_MMarks,(_this select 0)] call BIS_fnc_nearestPosition;deleteMarker _M;[""ScoreAdded"",[""AAA Site Destroyed"",30]] call BIS_fnc_showNotification;[30] call FLO_fnc_addReward;[] spawn {isMusicActive=0;sleep 1;playMusic ""EventTrack01_F_Curator"";sleep 15;isMusicActive=1;};}];";
+					init="this addEventHandler [""Killed"", {_MMarks=allMapMarkers select {markerType _x==""o_antiair""};_M=[_MMarks,(_this select 0)] call BIS_fnc_nearestPosition;deleteMarker _M;[""ScoreAdded"",[""AAA Site Destroyed"",30]] call BIS_fnc_showNotification;[30] call FLO_fnc_addReward;[] spawn {FLO_EnableMusic=0;sleep 1;playMusic ""EventTrack01_F_Curator"";sleep 15;FLO_EnableMusic=1;};}];";
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 					aiRadarUsage=1;

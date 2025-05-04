@@ -29,11 +29,11 @@ _objectLoc = nearestobjects [getPos _thisFactoryTrigger, ["O_MBT_02_cannon_F"], 
 	["ScoreAdded", ["Enemy Armor Sabotaged", 10]] remoteExec ["BIS_fnc_showNotification", 0];
 	[10] call FLO_fnc_addReward; 
 	[] spawn {
-      isMusicActive = 0;
+      FLO_EnableMusic = 0;
       sleep 1;
       playMusic "EventTrack01_F_Curator";
       sleep 15;
-      isMusicActive = 1;
+      FLO_EnableMusic = 1;
   	};  
 	execVM 'Scripts\ArmorDis.sqf';
 	}];

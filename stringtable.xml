@@ -66,9 +66,6 @@
             <Key ID="STR_FLO_SUPPORTD_COMM">
                 <English>Enemy Communications Disabled For the Next Hour</English>
             </Key>
-            <Key ID="STR_FLO_SUPPORTD_HELI">
-                <English>Enemy Helicopter Support Dismantled For the Next Hour</English>
-            </Key>
             <Key ID="STR_FLO_SUPPORTD_HW">
                 <English>Enemy Heavy Weapons Support Dismantled For the Next Hour</English>
             </Key>
