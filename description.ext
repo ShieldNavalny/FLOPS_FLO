@@ -44,7 +44,7 @@ class CfgFunctions {
 // Music Config
 #include "music\CfgMusic.hpp"
 
-/*
+
 class CfgRemoteExec
 {
 	// List of script functions allowed to be sent from client via remoteExec
@@ -62,7 +62,7 @@ class CfgRemoteExec
 	
 	
 };
-*/
+
 
 #include "compositions\compositions.cfg"
 #include "Scripts\MissionSetupMenu\Dialog_Faction.hpp"
