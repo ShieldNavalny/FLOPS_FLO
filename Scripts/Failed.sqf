@@ -2,11 +2,11 @@ _allFOBMarks = allMapMarkers select {markerType _x == "b_installation" && marker
 if (count _allFOBMarks == 0 ) then {
 
 	[] spawn {
-		FLO_EnableMusic = 0;
+		FLO_EnableMusic = false;
 		sleep 1;
 		playMusic "EventTrack02_F_Curator";
 		sleep 15;
-		FLO_EnableMusic = 1;
+		FLO_EnableMusic = true;
 	};
 	
  hint "_You Lost the Last FOB_";
