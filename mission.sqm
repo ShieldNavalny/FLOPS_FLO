@@ -6767,7 +6767,7 @@ class Mission
 					{
 						position[]={-633.375,0,100.39};
 					};
-					name="ZEUS";
+					name="ZEUSADMIN";
 					id=4;
 					type="ModuleCurator_F";
 					atlOffset=185.97;
