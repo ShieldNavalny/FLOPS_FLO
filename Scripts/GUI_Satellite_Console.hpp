@@ -28,7 +28,7 @@ class C_LOCK
 		   fadein= 0;
            duration = le+011;
            fadeout=0;
-           onload = "hint parseText ""<t color='#7CC2FF' font='PuristaBold' align = 'right' size='2'> (+) +1 Hour </t><br /><t color='#7CC2FF' font='PuristaBold' align = 'right' size='2'> (-) -1 Hour</t><br /><t color='#7CC2FF' font='PuristaBold' align = 'right' size='2'> (T) Skip Time</t>"" ; StatusInfo = false ; titleFadeOut 0.01 ; PHOUR = 0 ; [ format['<t color='#0188FE' size='4.8' font='PuristaBold' shadow='0'>%1:00</t>', PHOUR],-0.03,0.38,9999,0,0,7537] spawn BIS_fnc_dynamicText; ";
+		   onLoad = "hint parseText ""<t color='#7CC2FF' font='PuristaBold' align = 'right' size='2'> (+) +1 Hour </t><br /><t color='#7CC2FF' font='PuristaBold' align = 'right' size='2'> (-) -1 Hour</t><br /><t color='#7CC2FF' font='PuristaBold' align = 'right' size='2'> (T) Skip Time</t>""; StatusInfo = false; titleFadeOut 0.01; PHOUR = 0; [format[""<t color='#0188FE' size='4.8' font='PuristaBold' shadow='0'>%1:00</t>"", PHOUR], -0.03, 0.38, 9999, 0, 0, 7537] spawn BIS_fnc_dynamicText;";
 		   onUnload = "hint '' ; [ format['', PHOUR],0.2,0,9999,0,0,7537] spawn BIS_fnc_dynamicText; ";
 		   controlsBackground[] = {};
            controls[] = {
