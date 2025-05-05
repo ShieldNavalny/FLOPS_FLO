@@ -34,11 +34,11 @@ deleteMarker _M ;
 execVM "Scripts\Civ_Relations.sqf";
 
    [] spawn {
-      FLO_EnableMusic = 0;
+      FLO_EnableMusic = false;
       sleep 1;
       playMusic "EventTrack01_F_Curator";
       sleep 15;
-      FLO_EnableMusic = 1;
+      FLO_EnableMusic = true;
   }; 
 }];
 
