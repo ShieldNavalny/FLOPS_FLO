@@ -25,6 +25,12 @@ if (!isServer) exitWith {};
 
 private _processVirtualMovement = {
     params ["_groupData", "_groupId", "_currentTime"];
+
+    // Sometimes it can throw a tantrum and _groupData will be nil which can result a log spam. Let's check for that
+    if (isNil "_groupData" || {isNil {_groupData get "position"}}) exitWith {
+        ["VIRTUALIZATION", 1, format["Group data for %1 is nil or invalid, skipping processing", _groupId]] call FLO_fnc_log;
+    };
+
     
     private _position = _groupData get "position";
     private _waypoints = _groupData getOrDefault ["waypoints", []];
@@ -216,7 +222,7 @@ while {true} do {
     };
     
     // Sleep for a reasonable interval - adjust as needed for performance
-    sleep 5;
+    sleep 10;
 };
 
 ["VIRTUALIZATION", 3, "Virtual groups update loop ended"] call FLO_fnc_log; 

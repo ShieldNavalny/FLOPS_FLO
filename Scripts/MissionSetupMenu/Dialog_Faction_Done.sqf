@@ -138,7 +138,7 @@ if ((_PlayerfactionName isEqualTo "") || (_EnemyfactionName isEqualTo "") || (_C
 	publicVariable "StartingLocationDone";
 
 	// Initialize Virtualization System
-	waitUntil {F_Init}; // Wait for faction initialization to complete
+	waitUntil {!isNil "F_Init" && {F_Init}}; // Wait for faction initialization to complete
 	["VIRTUALIZATION", 3, "Faction initialization complete, starting virtualization"] call FLO_fnc_log;
 
 	// Initialize virtualization system on the server
